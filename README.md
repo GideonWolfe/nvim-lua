@@ -78,3 +78,14 @@ What settings do I have to change to make this look nice?
 ![](https://i.imgur.com/pz33wnV.png)
 
 I've looked around at many configs and tried the autocommand on the nvim.dashboard github, but I can't get line numbers to hide on the dashboard
+
+
+## LSP install
+
+I understand that the `:LspInstall` command was removed from neovim, but I don't understand why.
+
+One of the benefits of `coc-nvim` was being able to `CocInstall` practically any language. I know that the `LspInstall` command has been re-implimented by others, but is this
+recommended?
+
+I'm unsure of the viability of relying on a bunch of random scripts, but I also don't wanna manually do it every time I need to set up a language. Stuff like python is easy but I
+don't even want to try getting the `lua` language server up and running.
