@@ -14,7 +14,7 @@ local g = vim.g
 -- Set number gutter to transparent
 -- Workaround to use autocommand since it isnt respected otherwise
 -- https://www.reddit.com/r/neovim/comments/me35u9/lua_config_to_set_highlight/
-cmd[[au VimEnter * highlight LineNr ctermfg=white ctermbg=black]] 
+-- cmd[[au VimEnter * highlight LineNr ctermfg=white ctermbg=black]] 
 cmd[[au VimEnter * highlight SignColumn ctermbg=black]] 
 -- set pmenu to transparent
 cmd[[au VimEnter * highlight Pmenu ctermfg=white ctermbg=black]] 
@@ -81,9 +81,9 @@ cmd[[au VimEnter * highlight SpellCap ctermfg=yellow ctermbg=black]]
 -- cmd[[au VimEnter * highlight SpellRare ctermfg=cyan ctermbg=black]] 
 
 -- Color of line numbers
-cmd[[au VimEnter * highlight LineNr ctermfg=blue]] 
+-- cmd[[au VimEnter * highlight LineNr ctermfg=blue]] 
 -- Color of current line number
--- cmd[[au VimEnter * highlight CursorLineNr cterm=bold ctermbg=black ctermfg=green]] 
+cmd[[au VimEnter * highlight CursorLineNr cterm=bold ctermbg=black ctermfg=green]] 
 
 -- HACK: in order to prevent treesitter + wpgtk from highlighting
 -- all punctuation in light grey

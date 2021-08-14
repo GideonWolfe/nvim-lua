@@ -100,7 +100,7 @@ opt.showmatch = true
 -- Enable line number of current line
 -- looking different
 -- TODO enable line number color while disabling bar
--- opt.cursorline = true
+opt.cursorline = true
 
 -- Tab settings
 opt.expandtab = true
