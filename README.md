@@ -51,3 +51,23 @@ I've managed to change the `VertSplit` highlight group to look semi decent and j
 
 I know the status
 bar is at the bottom of the active window, but I would like a visual separator.
+
+
+## Pmenu kind labels
+
+I'm using the `lsp-kind` plugin to declare some nice symbols for my suggestions.
+
+I'm not sure which fonts I'm missing to make this look right, but these are the default symbols.
+
+![](https://i.imgur.com/00Y3hFf.png)
+(`lsp-config.lua`)
+
+
+![](https://i.imgur.com/wGGJRbl.png)
+(`compe.lua`)
+
+It just looks really hacky. I'd like to get rid of all the extra spacing, and the unnecessary helper text like `[Spell]`.
+
+![](https://i.imgur.com/0KPE8ni.png)
+
+What settings do I have to change to make this look nice?
