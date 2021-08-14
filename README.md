@@ -30,5 +30,5 @@ When I'm simply typing in insert mode, the `Pmenu` automatically pops up with su
 
 However If I **don't** select an option, and instead finish my word and press space, I get a  `Pattern not found` error.
 
-![](![animation](https://user-images.githubusercontent.com/32942052/129457282-fe5031c9-f004-4721-8082-593fef102ddf.gif)
+![animation](https://user-images.githubusercontent.com/32942052/129457282-fe5031c9-f004-4721-8082-593fef102ddf.gif)
 
