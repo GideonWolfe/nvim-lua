@@ -32,3 +32,4 @@ However If I **don't** select an option, and instead finish my word and press sp
 
 ![animation](https://user-images.githubusercontent.com/32942052/129457282-fe5031c9-f004-4721-8082-593fef102ddf.gif)
 
+I suspect this might have something to do with my [automplete mappings](https://github.com/GideonWolfe/nvim-lua/blob/5f0435084fd4e36ff6a5d570b25f4740a74460ca/lua/mappings.lua#L107)
