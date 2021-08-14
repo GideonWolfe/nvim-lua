@@ -32,4 +32,22 @@ However If I **don't** select an option, and instead finish my word and press sp
 
 ![animation](https://user-images.githubusercontent.com/32942052/129457282-fe5031c9-f004-4721-8082-593fef102ddf.gif)
 
-I suspect this might have something to do with my [automplete mappings](https://github.com/GideonWolfe/nvim-lua/blob/5f0435084fd4e36ff6a5d570b25f4740a74460ca/lua/mappings.lua#L107)
+I suspect this might have something to do with my [autocomplete mappings](https://github.com/GideonWolfe/nvim-lua/blob/5f0435084fd4e36ff6a5d570b25f4740a74460ca/lua/mappings.lua#L107)
+
+## Pmenu borders
+
+This is something I've wanted for *ages*, but I still don't know if it's possible. Add a border around the default `Pmenu`?
+
+I like having it the same color as the background, which *can* get a bit hard to see with lots of text around.
+
+My function signature and documentation windows all have borders, any way I can get the pmenu to follow suite?
+
+
+## Horizontal line split
+
+I've managed to change the `VertSplit` highlight group to look semi decent and just a thin line. Can I replicate this behavior with a horizontally split window? 
+
+![](https://i.imgur.com/FY7bCNR.png)
+
+I know the status
+bar is at the bottom of the active window, but I would like a visual separator.
