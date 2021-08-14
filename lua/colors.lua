@@ -123,3 +123,8 @@ cmd[[highlight TelescopePreviewBorder ctermfg=yellow ctermbg=black]]
 cmd[[highlight TelescopeMatching ctermfg=cyan ctermbg=black]] -- colors matching input
 cmd[[highlight TelescopePromptPrefix ctermfg=red ctermbg=black]]
 
+
+
+-- Trouble colors
+cmd[[highlight TroubleCount ctermfg=red ctermbg=black cterm=bold]] -- number of issues in file
+
