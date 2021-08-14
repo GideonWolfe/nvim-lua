@@ -47,7 +47,7 @@ My function signature and documentation windows all have borders, any way I can 
 
 I've managed to change the `VertSplit` highlight group to look semi decent and just a thin line. Can I replicate this behavior with a horizontally split window? 
 
-![](https://i.imgur.com/FY7bCNR.png)
+![](https://i.imgur.com/CiDG6UP.png)
 
 I know the status
 bar is at the bottom of the active window, but I would like a visual separator.
