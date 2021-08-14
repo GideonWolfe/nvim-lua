@@ -15,3 +15,10 @@ I attempted a similar thing prior to nvim 0.5, [vim.reaper](https://github.com/g
 * `lua/configs/*`: Configurations for a specific plugin, keybinds, etc.
 * `lua/lsp/lsp-copnfig.lua`: Configuration for various LSPs.
 * `lua/utils/*`: Various helper functions (like adding mapping functiions)
+
+
+# Issues
+
+When customizing to this extent, there's bound to be a few cracks in the cement. Here is where I plan to list the things currently bothering me and that I'd love help with!
+
+If this gets extensive enough I might move it to "Issues" or "Project" but we'll see.
