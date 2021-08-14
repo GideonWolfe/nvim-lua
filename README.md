@@ -89,3 +89,7 @@ recommended?
 
 I'm unsure of the viability of relying on a bunch of random scripts, but I also don't wanna manually do it every time I need to set up a language. Stuff like python is easy but I
 don't even want to try getting the `lua` language server up and running.
+
+## Load NvimTree on directory open
+
+I'm not sure how to accomplish this but ideally when `nvim` was called with a directory as an argument, `NvimTree` should automatically be open so I can select a file.
