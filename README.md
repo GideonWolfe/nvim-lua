@@ -71,3 +71,10 @@ It just looks really hacky. I'd like to get rid of all the extra spacing, and th
 ![](https://i.imgur.com/0KPE8ni.png)
 
 What settings do I have to change to make this look nice?
+
+
+## Dashboard line numbers
+
+![](https://i.imgur.com/pz33wnV.png)
+
+I've looked around at many configs and tried the autocommand on the nvim.dashboard github, but I can't get line numbers to hide on the dashboard
