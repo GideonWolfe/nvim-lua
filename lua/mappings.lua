@@ -88,16 +88,10 @@ local opt = {}
 
 
 -- jk or kj will enter normal mode 
--- map("i", "jk", "<ESC>", opt)
--- map("i", "kj", "<ESC>", opt)
 inoremap("jk", "<ESC>")
 inoremap("kj", "<ESC>")
 
 -- Window movement
--- map('n', '<c-h>', '<c-w>h')
--- map('n', '<c-j>', '<c-w>j')
--- map('n', '<c-k>', '<c-w>k')
--- map('n', '<c-l>', '<c-w>l')
 nmap('<c-h>', '<c-w>h')
 nmap('<c-j>', '<c-w>j')
 nmap('<c-k>', '<c-w>k')
@@ -153,12 +147,6 @@ vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 
 
 -- Kommentary mappings
--- vim.api.nvim_set_keymap("n", "<leader>cic", "<Plug>kommentary_line_increase", {})
--- vim.api.nvim_set_keymap("n", "<leader>ci", "<Plug>kommentary_motion_increase", {})
--- vim.api.nvim_set_keymap("x", "<leader>ci", "<Plug>kommentary_visual_increase", {})
--- vim.api.nvim_set_keymap("n", "<leader>cdc", "<Plug>kommentary_line_decrease", {})
--- vim.api.nvim_set_keymap("n", "<leader>cd", "<Plug>kommentary_motion_decrease", {})
--- vim.api.nvim_set_keymap("x", "<leader>cd", "<Plug>kommentary_visual_decrease", {})
 nmap("<leader>cic", "<Plug>kommentary_line_increase")
 nmap("<leader>ci", "<Plug>kommentary_motion_increase")
 xnoremap("<leader>cic", "<Plug>kommentary_visual_increase")
