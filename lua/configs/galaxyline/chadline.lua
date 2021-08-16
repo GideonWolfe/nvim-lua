@@ -77,6 +77,7 @@ gls.left[1] = {
                 r = "Prompt",
                 rm = "More", ]]
             }
+            -- TODO: incorporate these chars  
             local current_Mode = alias[vim.fn.mode()]
             if current_Mode == "Normal" then
               vim.cmd('hi viModeHighlight ctermbg=black ctermfg=green')
@@ -142,7 +143,7 @@ gls.left[4] = {
         provider = fileName,
         condition = condition.buffer_not_empty,
         highlight = {colors.white, colors.lightbg},
-        separator = " ",
+        separator = "",
         separator_highlight = {colors.lightbg, colors.lightbg2}
     }
 }
@@ -187,16 +188,25 @@ gls.left[7] = {
     }
 }
 
+
+-- Just a separator for the git and errors
 gls.left[8] = {
-    DiagnosticError = {
-        provider = "DiagnosticError",
-        icon = "  ",
-        -- highlight = {colors.red, colors.statusline_bg}
-        highlight = 'LspDiagnosticsDefaultError'
-    }
+  Space = {
+    provider = "WhiteSpace",
+    separator = "",
+  },
 }
 
 gls.left[9] = {
+    DiagnosticHint = {
+        provider = "DiagnosticHint",
+        icon = "  ",
+        -- highlight = {colors.yellow, colors.statusline_bg}
+        highlight = 'LspDiagnosticsDefaultHint'
+    }
+}
+
+gls.left[10] = {
     DiagnosticWarn = {
         provider = "DiagnosticWarn",
         icon = "  ",
@@ -205,12 +215,12 @@ gls.left[9] = {
     }
 }
 
-gls.left[10] = {
-    DiagnosticHint = {
-        provider = "DiagnosticHint",
-        icon = "  ",
-        -- highlight = {colors.yellow, colors.statusline_bg}
-        highlight = 'LspDiagnosticsDefaultHint'
+gls.left[11] = {
+    DiagnosticError = {
+        provider = "DiagnosticError",
+        icon = "  ",
+        -- highlight = {colors.red, colors.statusline_bg}
+        highlight = 'LspDiagnosticsDefaultError'
     }
 }
 
@@ -317,6 +327,17 @@ gls.right[8] = {
         -- highlight = {c.Color('yellow'), c.Color('purple')}
     }
 }
+
+-- gls.right[9] = {
+--     Space = {
+--         provider = function() return ' ' end,
+--         separator = ' ',
+--         separator_highlight = {'NONE', colors.bg},
+--         highlight = {colors.orange, colors.bg}
+--     }
+-- }
+
+
 
 -- On short lines, show the buffer type
 gls.short_line_right[1] = {
