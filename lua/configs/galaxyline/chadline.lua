@@ -193,6 +193,7 @@ gls.left[7] = {
 gls.left[8] = {
   Space = {
     provider = "WhiteSpace",
+    condition = require("galaxyline.condition").check_git_workspace,
     separator = "",
   },
 }
