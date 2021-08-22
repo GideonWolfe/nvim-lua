@@ -26,7 +26,7 @@ g.floating_window_border_dark = {
 -- I already require the config function in packer
 -- which sets this setting...
 g.nvim_tree_auto_close = 1
-
+g.nvim_tree_auto_open = 1
 
 -- automatically compile plugins.lua when editing
 --cmd [[autocmd BufWritePost plugins.lua PackerCompile]]
@@ -51,10 +51,10 @@ vim.cmd[[autocmd FileType text,markdown,tex setlocal spell ]]
 vim.cmd[[autocmd FileType text,markdown,tex setlocal textwidth=180 ]]
 
 
-vim.cmd[[autocmd FileType dashboard set norelativenumber nonumber | autocmd WinLeave <buffer> set relativenumber]]
 
 -- required option for compe autocomplete
 vim.o.completeopt = "menuone,noselect"
+vim.opt.shortmess:append('c')
 
 -- Don't autosave
 g.auto_save = false
