@@ -174,9 +174,9 @@ end
 local autocmds = {
     --- Current window has hybrid numbers
     --- All other windows have absolute numbers
-    numberToggle = {
-        {"BufEnter,FocusGained,InsertLeave", "*", "set relativenumber"},
-        {"BufLeave,FocusLost,InsertEnter", "*", "set norelativenumber"}
+    numberToggleConditional = {
+        {"BufEnter,FocusGained,InsertLeave", "*", [[if &ft !~# 'dashboard' | set relativenumber | endif]]},
+        {"BufLeave,FocusLost,InsertEnter", "*", [[if &ft !~# 'dashboard' | set norelativenumber | endif]]}
     },
 }
 augroups(autocmds)
