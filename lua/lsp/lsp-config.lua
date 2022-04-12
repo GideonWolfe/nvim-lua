@@ -90,7 +90,8 @@ require'lspconfig'.tsserver.setup{}
 -- Configure lspkind symbols
 require('lspkind').init({
     -- enables text annotations
-    with_text = false,
+    --with_text = false,
+    mode = "symbol_text",
 
     -- default symbol map
     -- can be either 'default' or

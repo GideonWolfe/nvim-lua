@@ -56,7 +56,8 @@ local function init()
   use {'ray-x/lsp_signature.nvim', config = [[require('configs.lsp_signature')]]}  
 
   -- Use alternating colors for nested perens
-  use {'p00f/nvim-ts-rainbow', config = [[require('configs.tsrainbow')]]}  
+  -- TODO broken throws errors FIX
+  --use {'p00f/nvim-ts-rainbow', config = [[require('configs.tsrainbow')]]}  
 
   -- Pretty symbols
   use {

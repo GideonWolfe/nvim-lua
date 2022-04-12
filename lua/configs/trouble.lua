@@ -3,7 +3,7 @@ require("trouble").setup {
     height = 10, -- height of the trouble list when position is top or bottom
     width = 50, -- width of the list when position is left or right
     icons = true, -- use devicons for filenames
-    mode = "lsp_workspace_diagnostics", -- "lsp_workspace_diagnostics", "lsp_document_diagnostics", "quickfix", "lsp_references", "loclist"
+    mode = "workspace_diagnostics", -- "lsp_workspace_diagnostics", "lsp_document_diagnostics", "quickfix", "lsp_references", "loclist"
     fold_open = "", -- icon used for open folds
     fold_closed = "", -- icon used for closed folds
     action_keys = { -- key mappings for actions in the trouble list
@@ -40,7 +40,7 @@ require("trouble").setup {
         information = "",
         other = "﫠"
     },
-    use_lsp_diagnostic_signs = true -- enabling this will use the signs defined in your lsp client
+    use_diagnostic_signs = true -- enabling this will use the signs defined in your lsp client
 }
 
 -- once you have a good theme check the highlight groups here
