@@ -138,4 +138,10 @@ cmd[[highlight DashboardFooter ctermfg=cyan ctermbg=black]] -- dashboard image
 
 
 -- BarBar tab line colors
-cmd[[highlight BufferTabpageFill ctermfg=black ctermbg=black]] -- dashboard image
+-- https://github.com/romgrk/barbar.nvim/blob/b3695e9825e33cd534d142383271557755370f3f/doc/barbar.txt#L79
+cmd[[highlight BufferTabpageFill ctermfg=black ctermbg=black]] -- background of empty space
+cmd[[highlight BufferCurrent ctermfg=cyan ctermbg=black cterm=bold]] -- current buffer text color
+cmd[[highlight BufferCurrentSign ctermfg=green ctermbg=black]] -- separator color of current buffer
+cmd[[highlight BufferInactive ctermfg=white ctermbg=black]] -- inactive buffer text color
+cmd[[highlight BufferInactiveSign ctermfg=white ctermbg=black]] -- separator color of inactive buffer
+cmd[[highlight BufferInactiveMod ctermfg=red ctermbg=black]] -- color of inactive modified files
