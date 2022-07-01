@@ -137,4 +137,5 @@ cmd[[highlight DashboardShortcut ctermfg=red ctermbg=black]] -- dashboard image
 cmd[[highlight DashboardFooter ctermfg=cyan ctermbg=black]] -- dashboard image
 
 
-
+-- BarBar tab line colors
+cmd[[highlight BufferTabpageFill ctermfg=black ctermbg=black]] -- dashboard image
