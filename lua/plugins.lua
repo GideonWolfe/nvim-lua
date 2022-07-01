@@ -180,6 +180,10 @@ local function init()
     -- config = [[require('configs.telescopemedia')]]
   }
 
+  -- Discord rich presence
+  use {
+    'andweeb/presence.nvim',
+  }
 
 
 end
