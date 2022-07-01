@@ -128,3 +128,13 @@ cmd[[highlight TelescopePromptPrefix ctermfg=red ctermbg=black]]
 -- Trouble colors
 cmd[[highlight TroubleCount ctermfg=red ctermbg=black cterm=bold]] -- number of issues in file
 
+
+-- Dashboard colors
+cmd[[highlight DashboardHeader ctermfg=red ctermbg=black cterm=bold]] -- dashboard image
+cmd[[highlight DashboardCenter ctermfg=blue ctermbg=black]] -- dashboard image
+cmd[[highlight DashboardCenterIcon ctermfg=green ctermbg=black]] -- dashboard image
+cmd[[highlight DashboardShortcut ctermfg=red ctermbg=black]] -- dashboard image
+cmd[[highlight DashboardFooter ctermfg=cyan ctermbg=black]] -- dashboard image
+
+
+
