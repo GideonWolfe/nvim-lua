@@ -79,7 +79,7 @@ local function init()
   }
 
 
-  -- Indentation tracking
+  -- -- Indentation tracking
   use {
     'lukas-reineke/indent-blankline.nvim',
     config = [[require('configs.indent-blankline')]]
@@ -184,6 +184,16 @@ local function init()
   use {
     'andweeb/presence.nvim',
   }
+
+
+  -- Markdown preview
+  use({
+      "iamcco/markdown-preview.nvim",
+      run = function() vim.fn["mkdp#util#install"]() end,
+      config = [[require('configs.markdown')]]
+  })
+  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+
 
 
 end
