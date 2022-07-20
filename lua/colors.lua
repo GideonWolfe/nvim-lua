@@ -145,3 +145,16 @@ cmd[[highlight BufferCurrentSign ctermfg=green ctermbg=black]] -- separator colo
 cmd[[highlight BufferInactive ctermfg=white ctermbg=black]] -- inactive buffer text color
 cmd[[highlight BufferInactiveSign ctermfg=white ctermbg=black]] -- separator color of inactive buffer
 cmd[[highlight BufferInactiveMod ctermfg=red ctermbg=black]] -- color of inactive modified files
+
+
+
+
+-- Hop highlight colors
+-- :h hop-highlights
+cmd[[highlight HopNextKey ctermfg=green ctermbg=black cterm=bold]]
+cmd[[highlight HopNextKey1 ctermfg=blue ctermbg=black cterm=bold]]
+cmd[[highlight HopNextKey2 ctermfg=yellow ctermbg=black cterm=bold]]
+cmd[[highlight HopUnmatched ctermfg=red ctermbg=black cterm=bold]]
+cmd[[highlight HopCursor ctermfg=cyan ctermbg=black cterm=bold]]
+cmd[[highlight HopPreview ctermfg=magenta ctermbg=black cterm=bold]]
+
