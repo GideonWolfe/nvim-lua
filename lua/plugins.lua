@@ -138,17 +138,8 @@ local function init()
   -- A File Explorer For Neovim Written In Lua
   use {
     "kyazdani42/nvim-tree.lua",
-    cmd = {
-      "NvimTreeToggle",
-      "NvimTreeRefresh",
-      "NvimTreeFindFile"
-    },
     -- devicons in lua
     requires = "kyazdani42/nvim-web-devicons",
-    config = function()
-      -- require("configs.nvimtree")
-      require("configs.nvimtree").config()
-    end
   }
 
   -- Searching and finding
@@ -195,6 +186,15 @@ local function init()
   use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
 
+  use {
+    'phaazon/hop.nvim',
+    branch = 'v2', -- optional but strongly recommended
+    config = [[require('configs.hop')]]
+  }
+
+  use {
+    'simrat39/symbols-outline.nvim',
+  }
 
 end
 

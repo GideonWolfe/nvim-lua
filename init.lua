@@ -8,3 +8,5 @@ require('mappings')
 require('colors')
 -- Configuration for LSPs
 require('lsp.lsp-config')
+
+require("nvim-tree").setup()
