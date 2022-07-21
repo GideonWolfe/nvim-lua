@@ -221,6 +221,12 @@ nnoremap('<leader>gbc', [[<cmd>lua require('telescope.builtin').git_bcommits()<c
 nnoremap('<leader>gbr', [[<cmd>lua require('telescope.builtin').git_branches()<cr>]]) -- checkout action <cr>, track action <C-t> and rebase action<C-r>
 
 
+-- Hop mappings
+nnoremap('<leader>hw', ':HopWord<CR>') -- hop to a word
+nnoremap('<leader>hc', ':HopChar1<CR>') -- type a character, hop to it
+nnoremap('<leader>hl', ':HopLine<CR>') -- hop to a line
+
+
 
 -- Mappings to move lines
 nnoremap("<A-j>", ":m .+1<CR>==")
