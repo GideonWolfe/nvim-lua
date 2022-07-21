@@ -186,15 +186,30 @@ local function init()
   use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
 
+  -- Hop to various locations in buffer
   use {
     'phaazon/hop.nvim',
     branch = 'v2', -- optional but strongly recommended
     config = [[require('configs.hop')]]
   }
 
+  -- Outline symbols/functions
   use {
     'simrat39/symbols-outline.nvim',
   }
+
+  -- add/delete/change surrounds
+  use({
+    "kylechui/nvim-surround",
+    config = function()
+      require("nvim-surround").setup({
+          -- Configuration here, or leave empty to use defaults
+      })
+    end
+  })
+
+
+
 
 end
 
