@@ -32,13 +32,15 @@ packer.init({
 
 return packer.startup(function(use)
 	-- Let packer manage itself
-	use("wbthomason/packer.nvim")
+	use({ "wbthomason/packer.nvim" })
 
 	-- Configs for LSP
-	use("neovim/nvim-lspconfig")
+	use({ "neovim/nvim-lspconfig" })
 	-- use {
 	-- 'kabouzeid/nvim-lspinstall'
-	-- config = [[require('configs.treesitter')]]
+	-- config = function()
+	--   require('configs.treesitter')
+	-- end,
 	-- }
 
 	-- Snippets
@@ -49,35 +51,90 @@ return packer.startup(function(use)
 			require("configs.luasnip")
 		end,
 	})
+	use({ "rafamadriz/friendly-snippets" })
 
+	-- Completion
 	use({
-		"rafamadriz/friendly-snippets",
+		"hrsh7th/nvim-cmp",
+		config = function()
+			require("configs.cmp")
+		end,
 	})
-	-- Autocomplete for LSP
-	use({ "hrsh7th/nvim-compe", config = [[require('configs.compe')]], event = "InsertEnter *" })
+	use({
+		"hrsh7th/cmp-buffer",
+		requires = { "hrsh/nvim-cmp" },
+	})
+	use({
+		"hrsh7th/cmp-path",
+		requires = { "hrsh/nvim-cmp" },
+	})
+	use({
+		"hrsh7th/cmp-cmdline",
+		requires = { "hrsh/nvim-cmp" },
+	})
+	use({
+		"saadparwaiz1/cmp_luasnip",
+		requires = { "hrsh/nvim-cmp" },
+	})
+	use({
+		"hrsh7th/cmp-nvim-lsp",
+		requires = { "hrsh/nvim-cmp" },
+	})
+	use({
+		"hrsh7th/cmp-emoji",
+		requires = { "hrsh/nvim-cmp" },
+	})
+	use({
+		"hrsh7th/cmp-nvim-lua",
+		requires = { "hrsh/nvim-cmp" },
+	})
+	use({
+		"zbirenbaum/copilot-cmp",
+		requires = { "hrsh/nvim-cmp" },
+	})
+	use({
+		"tzachar/cmp-tabnine",
+		run = "./install.sh",
+		requires = { "hrsh/nvim-cmp" },
+	})
+
 	-- Symbols for LSP preview
 	use({ "onsails/lspkind-nvim" })
 
 	-- Show LSP errors/diagnostics in pretty list
 	use({
 		"folke/trouble.nvim",
-		requires = "kyazdani42/nvim-web-devicons",
-		config = [[require('configs.trouble')]],
+		requires = { "kyazdani42/nvim-web-devicons" },
+		config = function()
+			require("configs.trouble")
+		end,
 	})
 
 	-- Show LSP TODOs/HACKs in pretty list
 	use({
 		"folke/todo-comments.nvim",
-		requires = "nvim-lua/plenary.nvim",
-		config = [[require('configs.todocomments')]],
+		requires = { "nvim-lua/plenary.nvim" },
+		config = function()
+			require("configs.todocomments")
+		end,
 	})
 
 	-- Show function signatures in floating window
-	use({ "ray-x/lsp_signature.nvim", config = [[require('configs.lsp_signature')]] })
+	use({
+		"ray-x/lsp_signature.nvim",
+		config = function()
+			require("configs.lsp_signature")
+		end,
+	})
 
 	-- Use alternating colors for nested perens
 	-- TODO broken throws errors FIX
-	--use {'p00f/nvim-ts-rainbow', config = [[require('configs.tsrainbow')]]}
+	use({
+		"p00f/nvim-ts-rainbow",
+		config = function()
+			require("configs.tsrainbow")
+		end,
+	})
 
 	-- Pretty symbols
 	use({
@@ -87,21 +144,25 @@ return packer.startup(function(use)
 		end,
 	})
 
-	--Highlights
+	-- Highlights
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
-		config = [[require('configs.treesitter')]],
+		config = function()
+			require("configs.treesitter")
+		end,
 	})
 	use({
 		"nvim-treesitter/nvim-treesitter-refactor",
 		"nvim-treesitter/nvim-treesitter-textobjects",
 	})
 
-	-- -- Indentation tracking
+	-- Indentation tracking
 	use({
 		"lukas-reineke/indent-blankline.nvim",
-		config = [[require('configs.indent-blankline')]],
+		config = function()
+			require("configs.indent-blankline")
+		end,
 	})
 
 	-- Wal colorscheme and wpgtk for alt
@@ -112,25 +173,29 @@ return packer.startup(function(use)
 	-- Git signs in the gutter
 	use({
 		"lewis6991/gitsigns.nvim",
-		config = [[require('configs.gitsigns')]],
-		requires = {
-			"nvim-lua/plenary.nvim",
-		},
+		config = function()
+			require("configs.gitsigns")
+		end,
+		requires = { "nvim-lua/plenary.nvim" },
 		event = "BufRead",
 	})
 
 	-- Colorize color codes
 	use({
 		"norcalli/nvim-colorizer.lua",
-		config = [[require('configs.colorizer')]],
+		config = function()
+			require("configs.colorizer")
+		end,
 		-- ft = {'css', 'javascript', 'json', 'scss', 'vim'}
 		ft = {},
 	})
 
-	-- auto commenting
+	-- Auto commenting
 	use({
 		"b3nj5m1n/kommentary",
-		config = [[require('configs.kommentary')]],
+		config = function()
+			require("configs.kommentary")
+		end,
 	})
 
 	-- Status line
@@ -138,8 +203,12 @@ return packer.startup(function(use)
 		"glepnir/galaxyline.nvim",
 		branch = "main",
 		-- your statusline
-		-- config = [[require('configs.galaxyline')]],
-		config = [[require('configs.galaxyline.chadline')]],
+		-- config = function()
+		-- 	require("configs.galaxyline")
+		-- end,
+		config = function()
+			require("configs.galaxyline.chadline")
+		end,
 		-- some optional icons
 		requires = { "kyazdani42/nvim-web-devicons", opt = true },
 	})
@@ -156,21 +225,28 @@ return packer.startup(function(use)
 	-- A File Explorer For Neovim Written In Lua
 	use({
 		"kyazdani42/nvim-tree.lua",
+		config = function()
+			require("configs.nvimtree")
+		end,
 		-- devicons in lua
-		requires = "kyazdani42/nvim-web-devicons",
+		requires = { "kyazdani42/nvim-web-devicons" },
 	})
 
 	-- Searching and finding
 	use({
 		"nvim-telescope/telescope.nvim",
-		requires = { { "nvim-lua/popup.nvim" }, { "nvim-lua/plenary.nvim" } },
-		config = [[require('configs.telescope')]],
+		requires = {
+			{ "nvim-lua/popup.nvim" },
+			{ "nvim-lua/plenary.nvim" },
+		},
+		config = function()
+			require("configs.telescope")
+		end,
 	})
 
 	-- auto pairs
 	use({
 		"windwp/nvim-autopairs",
-		after = "nvim-compe",
 		config = function()
 			require("configs.autopairs")
 		end,
@@ -179,13 +255,21 @@ return packer.startup(function(use)
 	-- Dashboard
 	use({
 		"glepnir/dashboard-nvim",
-		config = [[require('configs.dashboard')]],
+		config = function()
+			require("configs.dashboard")
+		end,
 	})
 
 	use({
 		"nvim-telescope/telescope-media-files.nvim",
-		requires = { { "nvim-lua/popup.nvim" }, { "nvim-lua/plenary.nvim" }, { "nvim-telescope/telescope.nvim" } },
-		-- config = [[require('configs.telescopemedia')]]
+		requires = {
+			{ "nvim-lua/popup.nvim" },
+			{ "nvim-lua/plenary.nvim" },
+			{ "nvim-telescope/telescope.nvim" },
+		},
+		-- config = function()
+		-- 	require("configs.telescopemedia")
+		-- end,
 	})
 
 	-- Discord rich presence
@@ -194,13 +278,6 @@ return packer.startup(function(use)
 	})
 
 	-- Markdown preview
-	use({
-		"iamcco/markdown-preview.nvim",
-		run = function()
-			vim.fn["mkdp#util#install"]()
-		end,
-		config = [[require('configs.markdown')]],
-	})
 	use({
 		"iamcco/markdown-preview.nvim",
 		run = "cd app && npm install",
@@ -214,7 +291,9 @@ return packer.startup(function(use)
 	use({
 		"phaazon/hop.nvim",
 		branch = "v2", -- optional but strongly recommended
-		config = [[require('configs.hop')]],
+		config = function()
+			require("configs.hop")
+		end,
 	})
 
 	-- Outline symbols/functions
@@ -222,7 +301,7 @@ return packer.startup(function(use)
 		"simrat39/symbols-outline.nvim",
 	})
 
-	-- add/delete/change surrounds
+	-- Add/delete/change surrounds
 	use({
 		"kylechui/nvim-surround",
 		config = function()
