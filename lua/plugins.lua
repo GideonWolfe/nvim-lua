@@ -139,6 +139,9 @@ local function init()
   use {
     "kyazdani42/nvim-tree.lua",
     -- devicons in lua
+    config = function()
+			require("configs.nvimtree")
+		end,
     requires = "kyazdani42/nvim-web-devicons",
   }
 
