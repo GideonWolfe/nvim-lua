@@ -22,12 +22,6 @@ g.floating_window_border_dark = {
     {"│", "FloatBorderDark"}
 }
 
--- This should't be necessary
--- I already require the config function in packer
--- which sets this setting...
-g.nvim_tree_auto_close = 1
-g.nvim_tree_auto_open = 1
-
 -- automatically compile plugins.lua when editing
 --cmd [[autocmd BufWritePost plugins.lua PackerCompile]]
 
