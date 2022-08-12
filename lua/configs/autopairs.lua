@@ -4,4 +4,6 @@ if not status then
 	return
 end
 
-autopairs.setup()
+autopairs.setup({
+  fast_wrap = {},
+})
