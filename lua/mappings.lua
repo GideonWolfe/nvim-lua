@@ -150,12 +150,12 @@ vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 nmap("<leader>cic", "<Plug>kommentary_line_increase")
 nmap("<leader>ci", "<Plug>kommentary_motion_increase")
 xnoremap("<leader>cic", "<Plug>kommentary_visual_increase")
-nmap("<leader>cdc", "<Plug>kommentary_line_increase")
 nmap("<leader>cd", "<Plug>kommentary_motion_decrease")
 xnoremap("<leader>cd", "<Plug>kommentary_visual_decrease")
 
 -- Open NvimTree
 -- vim.api.nvim_set_keymap("n", "<leader>nt", ":NvimTreeToggle<CR>", {silent = true})
+-- TODO: why doesn't this wor
 nnoremap("<leader>nt", ":NvimTreeToggle<CR>")
 
 -- BarBar tab bar bindings
@@ -205,7 +205,7 @@ nnoremap('<leader>fvh', [[<cmd>lua require('telescope.builtin').help_tags()<cr>]
 nnoremap('<leader>fvc', [[<cmd>lua require('telescope.builtin').commands()<cr>]]) -- find vim command
 nnoremap('<leader>fmp', [[<cmd>lua require('telescope.builtin').man_pages()<cr>]]) -- search man pages
 nnoremap('<leader>qf', [[<cmd>lua require('telescope.builtin').quickfix()<cr>]]) -- list quick fixes
-nnoremap('<leader>fs', [[<cmd>lua require('telescope.builtin').spell_suggest()<cr>]]) -- suggest spelling
+nnoremap('<leader>ss', [[<cmd>lua require('telescope.builtin').spell_suggest()<cr>]]) -- suggest spelling
 nnoremap('<leader>fkm', [[<cmd>lua require('telescope.builtin').keymaps()<cr>]]) -- find keymaps
 nnoremap('<leader>fr', [[<cmd>lua require('telescope.builtin').lsp_references()<cr>]]) -- show references for obj under cursor
 nnoremap('<leader>fs', [[<cmd>lua require('telescope.builtin').lsp_document_symbols()<cr>]]) -- show symbols in document
@@ -225,6 +225,9 @@ nnoremap('<leader>gbr', [[<cmd>lua require('telescope.builtin').git_branches()<c
 nnoremap('<leader>hw', ':HopWord<CR>') -- hop to a word
 nnoremap('<leader>hc', ':HopChar1<CR>') -- type a character, hop to it
 nnoremap('<leader>hl', ':HopLine<CR>') -- hop to a line
+
+nnoremap('<leader>tr', ':TroubleToggle<CR>') -- Toggle Troube window
+nnoremap('<leader>td', ':TodoTrouble<CR>') -- Toggle todo window
 
 
 
