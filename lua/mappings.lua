@@ -230,6 +230,9 @@ nnoremap('<leader>tr', ':TroubleToggle<CR>') -- Toggle Troube window
 nnoremap('<leader>td', ':TodoTrouble<CR>') -- Toggle todo window
 
 
+nnoremap('<leader>so', ':SymbolsOutline<CR>') -- Toggle symbol window
+
+
 
 -- Mappings to move lines
 nnoremap("<A-j>", ":m .+1<CR>==")

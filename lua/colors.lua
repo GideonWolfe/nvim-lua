@@ -158,3 +158,5 @@ cmd[[highlight HopUnmatched ctermfg=red ctermbg=black cterm=bold]]
 cmd[[highlight HopCursor ctermfg=cyan ctermbg=black cterm=bold]]
 cmd[[highlight HopPreview ctermfg=magenta ctermbg=black cterm=bold]]
 
+-- Symbols outline highlights
+cmd[[highlight FocusedSymbol ctermfg=magenta ctermbg=black cterm=bold]]
