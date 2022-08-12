@@ -100,3 +100,40 @@ I'm not sure how to accomplish this but ideally when `nvim` was called with a di
 This must have something to do with the inability to disable line numbers on the dashboard. Is my autocommand overwriting or something?
 
 ![](https://i.imgur.com/2rlPDgS.png)
+
+
+
+
+
+# mappings
+
+For brevity, `<Leader>` has been abbreviated to `<L>`
+
+| Action                                      | Key    |
+|---------------------------------------------|--------|
+| Hop to word                                 | <L>hw  |
+| Hop to char                                 | <L>hc  |
+| Hop to line                                 | <L>hl  |
+| Telescope: Git branches                     | <L>gbr |
+| Telescope: Git buffer commits (checkout)    | <L>gbc |
+| Telescope: Git commits (checkout)           | <L>gbo |
+| Telescope: List builtin telescope modules   | <L>tbi |
+| Telescope: Find LSP definitions             | <L>fd  |
+| Telescope: Find LSP implementations         | <L>fi  |
+| Telescope: Find LSP code actions            | <L>ca  |
+| Telescope: Find LSP symbols in workspace    | <L>fws |
+| Telescope: Find LSP symbols in document     | <L>fs  |
+| Telescope: Find LSP references under cursor | <L>fr  |
+| Telescope: Show keymaps                     | <L>fkm |
+| Telescope: Suggest spelling                 | <L>ss  |
+| Telescope: List quickfixes                  | <L>qf  |
+| Telescope: Find vim command                 | <L>fvc |
+| Telescope: Search vim help                  | <L>fvh |
+| Telescope: Search man pages                 | <L>fmp |
+| Telescope: Find word (live grep)            | <L>fw  |
+| Telescope: File browser                     | <L>fb  |
+| Telescope: File browser                     | <L>fb  |
+| Telescope: Find git files                   | <L>fgf |
+| Telescope: Find media files                 | <L>fmf |
+| Telescope: Find media files                 | <L>ff  |
+
