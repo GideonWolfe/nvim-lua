@@ -5,5 +5,7 @@ if not status then
 end
 
 autopairs.setup({
-  fast_wrap = {},
+  fast_wrap = {
+    chars = { '{', '[', '(', '"', "'", "`" },
+  },
 })
