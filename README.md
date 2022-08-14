@@ -19,66 +19,9 @@ I attempted a similar thing prior to nvim 0.5, [vim.reaper](https://github.com/g
 
 # Issues
 
-## Horizontal line split
-
-I've managed to change the `VertSplit` highlight group to look semi decent and just a thin line. Can I replicate this behavior with a horizontally split window? 
-
-![](https://i.imgur.com/CiDG6UP.png)
-
-I know the status
-bar is at the bottom of the active window, but I would like a visual separator.
-
-
-## Pmenu kind labels
-
-I'm using the `lsp-kind` plugin to declare some nice symbols for my suggestions.
-
-I'm not sure which fonts I'm missing to make this look right, but these are the default symbols.
-
-![](https://i.imgur.com/00Y3hFf.png)
-(`lsp-config.lua`)
-
-
-![](https://i.imgur.com/wGGJRbl.png)
-(`compe.lua`)
-
-It just looks really hacky. I'd like to get rid of all the extra spacing, and the unnecessary helper text like `[Spell]`.
-
-![](https://i.imgur.com/0KPE8ni.png)
-
-What settings do I have to change to make this look nice?
-
-
-## Dashboard line numbers
-
-![](https://i.imgur.com/pz33wnV.png)
-
-I've looked around at many configs and tried the autocommand on the nvim.dashboard github, but I can't get line numbers to hide on the dashboard
-
-
-## LSP install
-
-I understand that the `:LspInstall` command was removed from neovim, but I don't understand why.
-
-One of the benefits of `coc-nvim` was being able to `CocInstall` practically any language. I know that the `LspInstall` command has been re-implimented by others, but is this
-recommended?
-
-I'm unsure of the viability of relying on a bunch of random scripts, but I also don't wanna manually do it every time I need to set up a language. Stuff like python is easy but I
-don't even want to try getting the `lua` language server up and running.
-
 ## Load NvimTree on directory open
 
 I'm not sure how to accomplish this but ideally when `nvim` was called with a directory as an argument, `NvimTree` should automatically be open so I can select a file.
-
-
-# Telescope preview line numbers
-
-This must have something to do with the inability to disable line numbers on the dashboard. Is my autocommand overwriting or something?
-
-![](https://i.imgur.com/2rlPDgS.png)
-
-
-
 
 
 # mappings
