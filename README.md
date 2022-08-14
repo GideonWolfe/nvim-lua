@@ -179,5 +179,5 @@ For brevity, `<Leader>` has been abbreviated to `<L>`
 | NvimTree: Copy path                          | Y        |
 | NvimTree: Copy absolute path                 | gy       |
 | NvimTree: Close                              | q        |
-| Symbol Outline: Toggle                       | <L>so    |
+| Symbol Outline: Toggle                       | `<L>so`  |
 
