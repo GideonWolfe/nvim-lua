@@ -86,6 +86,26 @@ require'lspconfig'.pyright.setup({
 --npm i -g typescript typescript-language-server
 require'lspconfig'.tsserver.setup{}
 
+--sudo pacman -Syu lua-language-server
+require'lspconfig'.sumneko_lua.setup({
+  settings = {
+    -- TODO: This should hush the "undefined global vim" message but doesn't
+    Lua = {
+      diagnostics = {
+        globals = { "vim" },
+      },
+    },
+    workspace = {
+      -- Make the server aware of Neovim runtime files
+      library = vim.api.nvim_get_runtime_file("", true),
+    },
+    telemetry = {
+        enable = false,
+    },
+  },
+})
+
+
 
 -- Configure lspkind symbols
 require('lspkind').init({
