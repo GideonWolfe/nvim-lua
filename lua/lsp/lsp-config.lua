@@ -89,7 +89,6 @@ require'lspconfig'.tsserver.setup{}
 --sudo pacman -Syu lua-language-server
 require'lspconfig'.sumneko_lua.setup({
   settings = {
-    -- TODO: This should hush the "undefined global vim" message but doesn't
     Lua = {
       diagnostics = {
         globals = { "vim" },
