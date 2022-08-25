@@ -104,12 +104,11 @@ require'lspconfig'.sumneko_lua.setup({
   },
 })
 
--- TODO: add these language servers
 -- cmake-language-server
--- require'lspconfig'.cmake.setup{}
+require'lspconfig'.cmake.setup{}
 
 -- rust-analyzer
--- require'lspconfig'.rust_analyzer.setup{}
+require'lspconfig'.rust_analyzer.setup{}
 
 -- Configure lspkind symbols
 require('lspkind').init({
