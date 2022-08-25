@@ -104,10 +104,10 @@ require'lspconfig'.sumneko_lua.setup({
   },
 })
 
--- cmake-language-server
+--paru cmake-language-server
 require'lspconfig'.cmake.setup{}
 
--- rust-analyzer
+--sudo pacman -Syu rust-analyzer
 require'lspconfig'.rust_analyzer.setup{}
 
 -- Configure lspkind symbols
