@@ -6,7 +6,8 @@ local icons = {
     diagnostic = {
         error = "",
         warn = "",
-        info = "!"
+        info = "",
+        hint = ""
     },
     diff = {
         Add = "",
