@@ -26,37 +26,39 @@ cmd[[au VimEnter * highlight PmenuSel ctermfg=green ctermbg=black]]
 -- set gutter to transparent
 
 -- Colors for diagnostics and errors
-cmd[[au VimEnter * highlight LspDiagnosticsDefaultError ctermfg=red]] 
-cmd[[au VimEnter * highlight LspDiagnosticsDefaultWarning ctermfg=yellow]] 
-cmd[[au VimEnter * highlight LspDiagnosticsDefaultInformation ctermfg=green]] 
-cmd[[au VimEnter * highlight LspDiagnosticsDefaultHint ctermfg=blue]] 
+-- cmd[[au VimEnter * highlight LspDiagnosticsDefaultError ctermfg=red]] 
+-- cmd[[au VimEnter * highlight LspDiagnosticsDefaultWarning ctermfg=yellow]] 
+-- cmd[[au VimEnter * highlight LspDiagnosticsDefaultInformation ctermfg=green]] 
+-- cmd[[au VimEnter * highlight LspDiagnosticsDefaultHint ctermfg=blue]] 
+cmd[[au VimEnter * highlight DiagnosticsError ctermfg=red]]
+cmd[[au VimEnter * highlight DiagnosticsWarn ctermfg=yellow]]
+cmd[[au VimEnter * highlight DiagnosticsInfo ctermfg=green]]
+cmd[[au VimEnter * highlight DiagnosticsHint ctermfg=blue]]
 
 -- Get more specific: Errors for virtual text only for example
-cmd[[au VimEnter * highlight LspDiagnosticsVirtualTextError cterm=italic ctermfg=red]] 
-cmd[[au VimEnter * highlight LspDiagnosticsVirtualTextWarning cterm=italic ctermfg=yellow]] 
-cmd[[au VimEnter * highlight LspDiagnosticsVirtualTextInformation cterm=italic ctermfg=green]] 
-cmd[[au VimEnter * highlight LspDiagnosticsVirtualTextHint cterm=italic ctermfg=blue]] 
+cmd[[au VimEnter * highlight DiagnosticVirtualTextError cterm=italic ctermfg=red]]
+cmd[[au VimEnter * highlight DiagnosticVirtualTextWarn cterm=italic ctermfg=yellow]]
+cmd[[au VimEnter * highlight DiagnosticVirtualTextInfo cterm=italic ctermfg=green]]
+cmd[[au VimEnter * highlight DiagnosticVirtualTextHint cterm=italic ctermfg=blue]]
 
 -- Underline Colors
--- cmd[[au VimEnter * highlight LspDiagnosticsUnderlineError ctermfg=red ]] 
-cmd[[au VimEnter * highlight LspDiagnosticsUnderlineError cterm=NONE ctermfg=red guisp=Blue]] 
-cmd[[au VimEnter * highlight LspDiagnosticsUnderlineWarning ctermfg=yellow]] 
-cmd[[au VimEnter * highlight LspDiagnosticsUnderlineInformation ctermfg=green]] 
-cmd[[au VimEnter * highlight LspDiagnosticsUnderlineHint ctermfg=blue]] 
+cmd[[au VimEnter * highlight DiagnosticUnderlineError cterm=NONE ctermfg=red ]]
+cmd[[au VimEnter * highlight DiagnosticUnderlineWarn ctermfg=yellow]]
+cmd[[au VimEnter * highlight DiagnosticUnderlineInfo ctermfg=green]]
+cmd[[au VimEnter * highlight DiagnosticUnderlineHint ctermfg=blue]]
 
 -- Floating Colors
-cmd[[au VimEnter * highlight LspDiagnosticsFloatingError ctermfg=red]] 
-cmd[[au VimEnter * highlight LspDiagnosticsFloatingWarning ctermfg=yellow]] 
-cmd[[au VimEnter * highlight LspDiagnosticsFloatingInformation ctermfg=green]] 
-cmd[[au VimEnter * highlight LspDiagnosticsFloatingHint ctermfg=blue]] 
+cmd[[au VimEnter * highlight DiagnosticFloatingError ctermfg=red]]
+cmd[[au VimEnter * highlight DiagnosticFloatingWarn ctermfg=yellow]]
+cmd[[au VimEnter * highlight DiagnosticFloatingInfo ctermfg=green]]
+cmd[[au VimEnter * highlight DiagnosticFloatingHint ctermfg=blue]]
 
 -- LSP Sign colors
--- TODO: these don't seem to be doing anything
 -- the actual sign and color are defined in the lsp config
-cmd[[au VimEnter * highlight LspDiagnosticsSignError ctermfg=red]] 
-cmd[[au VimEnter * highlight LspDiagnosticsSignWarning ctermfg=yellow]] 
-cmd[[au VimEnter * highlight LspDiagnosticsSignInformation ctermfg=green]] 
-cmd[[au VimEnter * highlight LspDiagnosticsSignHint ctermfg=blue]] 
+cmd[[au VimEnter * highlight DiagnosticSignError ctermfg=red]]
+cmd[[au VimEnter * highlight DiagnosticSignWarn ctermfg=yellow]]
+cmd[[au VimEnter * highlight DiagnosticSignInfo ctermfg=green]]
+cmd[[au VimEnter * highlight DiagnosticSignHint ctermfg=blue]]
 
 -- Git Sign colors
 cmd[[au VimEnter * highlight GitSignsAdd ctermfg=green ctermbg=black]] 

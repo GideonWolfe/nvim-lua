@@ -1,8 +1,8 @@
 -- Diagnostics symbols for display in the sign column.
-vim.cmd('sign define DiagnosticSignError text=✖ texthl=DiagnosticDefaultError numhl=DiagnosticDefaultError')
-vim.cmd('sign define DiagnosticSignWarning text= texthl=DiagnosticsDefaultWarning numhl=DiagnosticDefaultWarning')
-vim.cmd('sign define DiagnosticSignInformation text= texthl=DiagnosticDefaulInfo numhl=DiagnosticDefaultInfo')
-vim.cmd('sign define DiagnosticSignHint text= texthl=DiagnosticDefaultHint numhl=DiagnosticDefaultHint')
+vim.cmd('sign define DiagnosticSignError text=✖ texthl=DiagnosticError numhl=DiagnosticError')
+vim.cmd('sign define DiagnosticSignWarn text= texthl=DiagnosticsWarn numhl=DiagnosticWarn')
+vim.cmd('sign define DiagnosticSignInfo text= texthl=DiagnosticInfo numhl=DiagnosticInfo')
+vim.cmd('sign define DiagnosticSignHint text= texthl=DiagnosticHint numhl=DiagnosticHint')
 
 
 -- Create a custom handler for hovering (pressing K on thing)
@@ -98,7 +98,6 @@ require'lspconfig'.html.setup{}
 require'lspconfig'.jsonls.setup{}
 
 -- npm -i -g pyright
---require'lspconfig'.pyright.setup{on_attach=python_attach, capabilities=capabilities}
 require'lspconfig'.pyright.setup({
   on_attach = python_attach,
   capabilities = capabilities
