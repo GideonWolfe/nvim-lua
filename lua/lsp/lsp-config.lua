@@ -115,6 +115,9 @@ require'lspconfig'.rust_analyzer.setup{}
 --paru marksman-bin
 require'lspconfig'.marksman.setup{}
 
+--paru phpactor
+require'lspconfig'.phpactor.setup{}
+
 -- Configure lspkind symbols
 require('lspkind').init({
     -- enables text annotations
