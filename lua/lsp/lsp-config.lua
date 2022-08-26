@@ -113,10 +113,22 @@ require'lspconfig'.cmake.setup{}
 require'lspconfig'.rust_analyzer.setup{}
 
 --paru marksman-bin
+--markdown
 require'lspconfig'.marksman.setup{}
 
 --paru phpactor
+--php
 require'lspconfig'.phpactor.setup{}
+
+--install.packages("languageserver") (from within R)
+require'lspconfig'.r_language_server.setup{}
+
+--gem install sorbet
+--ruby
+require'lspconfig'.sorbet.setup{}
+
+-- npm i -g sql-language-server
+require'lspconfig'.sqlls.setup{}
 
 -- Configure lspkind symbols
 require('lspkind').init({
