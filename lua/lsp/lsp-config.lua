@@ -1,9 +1,4 @@
 -- Diagnostics symbols for display in the sign column.
--- vim.cmd('sign define LspDiagnosticsSignError text=✖')
--- vim.cmd('sign define LspDiagnosticsSignWarning text=')
--- vim.cmd('sign define LspDiagnosticsSignInformation text=')
--- vim.cmd('sign define LspDiagnosticsSignHint text=')
--- Diagnostics symbols for display in the sign column.
 vim.cmd('sign define DiagnosticSignError text=✖ texthl=DiagnosticDefaultError numhl=DiagnosticDefaultError')
 vim.cmd('sign define DiagnosticSignWarning text= texthl=DiagnosticsDefaultWarning numhl=DiagnosticDefaultWarning')
 vim.cmd('sign define DiagnosticSignInformation text= texthl=DiagnosticDefaulInfo numhl=DiagnosticDefaultInfo')
