@@ -4,10 +4,10 @@
 -- vim.cmd('sign define LspDiagnosticsSignInformation text=')
 -- vim.cmd('sign define LspDiagnosticsSignHint text=')
 -- Diagnostics symbols for display in the sign column.
-vim.cmd('sign define LspDiagnosticsSignError text=✖ texthl=LspDiagnosticsDefaultError numhl=LspDiagnosticsDefaultError')
-vim.cmd('sign define LspDiagnosticsSignWarning text= texthl=LspDiagnosticsDefaultWarning numhl=LspDiagnosticsDefaultWarning')
-vim.cmd('sign define LspDiagnosticsSignInformation text= texthl=LspDiagnosticsDefaulInfo numhl=LspDiagnosticsDefaultInfo')
-vim.cmd('sign define LspDiagnosticsSignHint text= texthl=LspDiagnosticsDefaultHint numhl=LspDiagnosticsDefaultHint')
+vim.cmd('sign define DiagnosticSignError text=✖ texthl=DiagnosticDefaultError numhl=DiagnosticDefaultError')
+vim.cmd('sign define DiagnosticSignWarning text= texthl=DiagnosticsDefaultWarning numhl=DiagnosticDefaultWarning')
+vim.cmd('sign define DiagnosticSignInformation text= texthl=DiagnosticDefaulInfo numhl=DiagnosticDefaultInfo')
+vim.cmd('sign define DiagnosticSignHint text= texthl=DiagnosticDefaultHint numhl=DiagnosticDefaultHint')
 
 
 -- Create a custom handler for hovering (pressing K on thing)
@@ -64,28 +64,6 @@ end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-require'lspconfig'.bashls.setup{ capabilities = capabilities }
---sudo pacman -Syu ccls
-require'lspconfig'.ccls.setup{}
---npm i -g vscode-langservers-extracted
-require'lspconfig'.cssls.setup{}
--- npm install -g dockerfile-language-server-nodejs
-require'lspconfig'.dockerls.setup{}
---GO111MODULE=on go get golang.org/x/tools/gopls@latest
-require'lspconfig'.gopls.setup{}
---npm i -g vscode-langservers-extracted
-require'lspconfig'.html.setup{}
---npm i -g vscode-langservers-extracted
-require'lspconfig'.jsonls.setup{}
--- npm -i -g pyright
---require'lspconfig'.pyright.setup{on_attach=python_attach, capabilities=capabilities}
-require'lspconfig'.pyright.setup({
-  on_attach = python_attach,
-  capabilities = capabilities
-})
---npm i -g typescript typescript-language-server
-require'lspconfig'.tsserver.setup{}
-
 --sudo pacman -Syu lua-language-server
 require'lspconfig'.sumneko_lua.setup({
   settings = {
@@ -104,11 +82,44 @@ require'lspconfig'.sumneko_lua.setup({
   },
 })
 
+require'lspconfig'.bashls.setup{ capabilities = capabilities }
+
+--sudo pacman -Syu ccls
+require'lspconfig'.ccls.setup{}
+
+--npm i -g vscode-langservers-extracted
+require'lspconfig'.cssls.setup{}
+
+-- npm install -g dockerfile-language-server-nodejs
+require'lspconfig'.dockerls.setup{}
+
+--GO111MODULE=on go get golang.org/x/tools/gopls@latest
+require'lspconfig'.gopls.setup{}
+
+--npm i -g vscode-langservers-extracted
+require'lspconfig'.html.setup{}
+
+--npm i -g vscode-langservers-extracted
+require'lspconfig'.jsonls.setup{}
+
+-- npm -i -g pyright
+--require'lspconfig'.pyright.setup{on_attach=python_attach, capabilities=capabilities}
+require'lspconfig'.pyright.setup({
+  on_attach = python_attach,
+  capabilities = capabilities
+})
+
+--npm i -g typescript typescript-language-server
+require'lspconfig'.tsserver.setup{}
+
 --paru cmake-language-server
 require'lspconfig'.cmake.setup{}
 
 --sudo pacman -Syu rust-analyzer
 require'lspconfig'.rust_analyzer.setup{}
+
+--paru marksman-bin
+require'lspconfig'.marksman.setup{}
 
 -- Configure lspkind symbols
 require('lspkind').init({
