@@ -128,7 +128,6 @@ return packer.startup(function(use)
 	})
 
 	-- Use alternating colors for nested perens
-	-- TODO broken throws errors FIX
 	use({
 		"p00f/nvim-ts-rainbow",
 		config = function()
@@ -267,9 +266,6 @@ return packer.startup(function(use)
 			{ "nvim-lua/plenary.nvim" },
 			{ "nvim-telescope/telescope.nvim" },
 		},
-		-- config = function()
-		-- 	require("configs.telescopemedia")
-		-- end,
 	})
 
 	-- Discord rich presence
@@ -310,6 +306,22 @@ return packer.startup(function(use)
 			})
 		end,
 	})
+
+
+	-- easy tables for markdown
+	use({
+		"dhruvasagar/vim-table-mode",
+	})
+
+  -- TODO this doesn't really work without TERMGUICOLORS
+  -- color utilities
+  use({
+		"nvim-colortils/colortils.nvim",
+		config = function()
+			require("configs.colortils")
+		end,
+	})
+
 
 	if PACKER_BOOTSTRAP then
 		packer.sync()
