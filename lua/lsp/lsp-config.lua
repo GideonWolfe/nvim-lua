@@ -130,6 +130,11 @@ require'lspconfig'.sorbet.setup{}
 -- npm i -g sql-language-server
 require'lspconfig'.sqlls.setup{}
 
+
+-- npm install -g awk-language-server
+require'lspconfig'.awk_ls.setup{}
+
+
 -- Configure lspkind symbols
 require('lspkind').init({
     -- enables text annotations

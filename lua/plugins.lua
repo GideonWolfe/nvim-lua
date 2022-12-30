@@ -315,12 +315,12 @@ return packer.startup(function(use)
 
   -- TODO this doesn't really work without TERMGUICOLORS
   -- color utilities
-  use({
-		"nvim-colortils/colortils.nvim",
-		config = function()
-			require("configs.colortils")
-		end,
-	})
+ --  use({
+	-- 	"nvim-colortils/colortils.nvim",
+	-- 	config = function()
+	-- 		require("configs.colortils")
+	-- 	end,
+	-- })
 
 
 	if PACKER_BOOTSTRAP then
